@@ -3,7 +3,7 @@ import os
 
 
 class DataframeConan(ConanFile):
-    name = "dataframe"
+    name = "DataFrame"
     version = "0.1.2"
     description = "C++ implementation of dataframe"
     topics = ("conan", "dataframe")
