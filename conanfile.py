@@ -2,7 +2,7 @@ from conans import ConanFile, tools
 import os
 
 
-class DataframeConan(ConanFile):
+class DataFrameConan(ConanFile):
     name = "DataFrame"
     version = "0.1.2"
     description = "C++ implementation of dataframe"
@@ -14,6 +14,15 @@ class DataframeConan(ConanFile):
     no_copy_source = True
 
     exports = ["LICENSE.md"]
+
+    requires = (
+        "snappy/1.1.7@bincrafters/stable",
+        "lz4/1.8.3@bincrafters/stable",
+        "rapidjson/1.1.0@bincrafters/stable",
+        "mongo-c-driver/1.11.0@bisect/stable",
+        "mongo-cxx-driver/3.3.0@bisect/stable",
+        "arrow/0.13.0@shadow/stable"
+    )
 
     _source_subfolder = "source_subfolder"
 
